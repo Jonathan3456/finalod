@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --primary: #00b4d8;
+}
+
+* {
+    transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Inter', system_ui, sans-serif;
+}
+
+.heading-font {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Background */
+.hero-bg {
+    background: linear-gradient(rgba(0, 20, 60, 0.8), rgba(0, 20, 60, 0.9)), 
+                url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+/* Nav Link Hover Effect */
+.nav-link {
+    position: relative;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background-color: #00b4d8;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+/* Section Title Underline */
+.section-title {
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, #00b4d8, #00d4ff);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 9999px;
+}
+
+/* Card Hover Effect */
+.card-hover:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px -12px rgb(0 180 216);
+}
+
+/* Wave Animation */
+.wave {
+    animation: wave 3s linear infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(8deg); }
+    75% { transform: rotate(-8deg); }
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(to right, #00b4d8, #00d4ff);
+    z-index: 50;
+    width: 0%;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
